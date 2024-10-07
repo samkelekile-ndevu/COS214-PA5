@@ -1,5 +1,5 @@
 #include<iostream>
-
+//THIS FILE SERVES TO MAKE IT EASIER TO DEMO 
 #include"Room.h"
 #include"Section.h"
 #include"Light.h"

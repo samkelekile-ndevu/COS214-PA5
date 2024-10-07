@@ -18,6 +18,7 @@
 using namespace std;
 void Comp1()
 {
+      cout << "Component1 - Composition./n ";
       // Create individual devices
     Light* livingRoomLight = new Light();
     DoorLock* mainDoorLock = new DoorLock();
@@ -55,6 +56,7 @@ void Comp1()
 }
 void comp2()
 {
+      cout <<".\ncomponent 2 -Legacy Adapter .\n";
      // Create an old legacy thermostat
     OldThermostat* legacyThermostat = new OldThermostat();
 
@@ -76,7 +78,8 @@ void comp2()
 
 }
 void comp3()
-{
+{ 
+      cout <<"component 3 - CommandAutomation.\n";
       // Create some devices
     SmartDevice* light1 = new Light();
     SmartDevice* light2 = new Light();
@@ -113,6 +116,7 @@ void comp3()
 }
 void comp4()
 {
+      cout <<"Component4 - Sensor Observations and Notifications";
     // Create some devices
     SmartDevice* light1 = new Light();
     SmartDevice* alarm1 = new Alarm();
@@ -139,9 +143,9 @@ void comp4()
 }
 int main()
 {
-    //Comp1();
-    //comp2();
-   // comp3();
+    Comp1();
+    comp2();
+    comp3();
    comp4();
 
 }

@@ -15,7 +15,8 @@ void Room::removeDevice(SmartDevice* device)
    // devices.erase(remove(devices.begin(), devices.end(),device),devices.end() );
    //  devices.erase(std::remove(devices.begin(), devices.end(), device), devices.end());
    auto it = std::find(devices.begin(), devices.end(), device);
-    if (it != devices.end()) {
+    if (it != devices.end()) 
+    {
         devices.erase(it); // Use the iterator to erase the element
         std::cout << "Device removed successfully from room.\n";
     } else {
@@ -25,7 +26,8 @@ void Room::removeDevice(SmartDevice* device)
 string Room::getStatus()const
 {
     std::string status = "Room: " + name + "\n";
-        for (const auto& device : devices) {
+        for (const auto& device : devices)
+           {
             status += device->getDeviceType() + " is " + device->getStatus() + "\n";
         }
         return status;
@@ -38,7 +40,7 @@ void Room::performAction(const string& action)
 }
 string Room::getDeviceType()const 
 {
-    string status = "ROOM TYPE FOR "+ name+ " THAT HAS: ";
+    string status = "ROOM NAME "+ name+ " THAT HAS: ";
    for (const auto& device : devices) {
             status += device->getDeviceType()+".\n" ;
             
@@ -48,7 +50,7 @@ string Room::getDeviceType()const
 void Room::update(const string& sensorEvent)
     {
         if (sensorEvent == "motion detected") {
-            std::cout << " motion detected in the Room." << std::endl;
+            std::cout << " Motion detected in the Room by the sensor." << std::endl;
         }
 
     }

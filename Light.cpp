@@ -1,5 +1,6 @@
 #include<vector>
 #include"Light.h"
+using namespace std;
 Light::Light()
 {
     //light initially off
@@ -25,7 +26,7 @@ string Light::getStatus()const
 void Light::update(const string& sensorEvent)
 {
     if (sensorEvent == "motion detected") {
-            std::cout << "Light is turning on due to motion detection." << std::endl;
+            std::cout << "Light is turning on due to motion detection by the sensor." << std::endl;
         }
 }
 

@@ -9,7 +9,7 @@ CXXFLAGS = -std=c++11 -Wall -Wextra
 OUTPUT = prac5_simulator
 
 # Source Files
-SRCS =  TestingMain.cpp Room.cpp Light.cpp Section.cpp SmartDevice.cpp Thermostat.cpp DoorLock.cpp  OldThermostat.cpp SmartThermostatIntegrator.cpp Command.cpp MacroRoutine.cpp LockAllDoors.cpp TurnOffAllLights.cpp TurnOnAllAlarms.cpp Sensor.cpp Alarm.cpp
+SRCS =  DemoMain.cpp Room.cpp Light.cpp Section.cpp SmartDevice.cpp Thermostat.cpp DoorLock.cpp  OldThermostat.cpp SmartThermostatIntegrator.cpp Command.cpp MacroRoutine.cpp LockAllDoors.cpp TurnOffAllLights.cpp TurnOnAllAlarms.cpp Sensor.cpp Alarm.cpp
 # Object Files (from Source Files)
 OBJS = $(SRCS:.cpp=.o)
 

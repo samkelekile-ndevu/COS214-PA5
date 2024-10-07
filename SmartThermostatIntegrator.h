@@ -1,11 +1,28 @@
-//ADAPTER
+/**
+ * @class SmartThermostatIntegrator
+ * @brief Adapter class that integrates an old thermostat with the new smart thermostat interface.
+ *
+ * This class adapts the interface of the OldThermostat to the SmartDevice interface,
+ * allowing it to be used within the smart home automation system. It provides methods
+ * to set and get the temperature, along with the required interface methods from
+ * SmartDevice.
+ *
+ * @section methods Methods
+ * - setTemperature(int temp): Adapts the method to set temperature to the old interface.
+ * - getTemperature(): Adapts the method to get temperature from the old interface.
+ * - getStatus(): Returns the current status of the thermostat, including the current temperature.
+ * - performAction(const string& action): Executes specified actions on the thermostat.
+ * - getDeviceType(): Returns the type of the device as "Thermostat".
+ * - update(const string& sensorEvent): Responds to sensor events by updating the thermostat state.
+ */
+
 #ifndef ADAPTER_H
 #define ADAPTER_H
 using namespace std;
 #include"SmartDevice.h"
 #include<iostream>
 #include"OldThermostat.h"
-class SmartThermostatIntergator : public SmartDevice
+class SmartThermostatIntergator : public Thermostat
 {
     private:
     OldThermostat* adaptee ;
